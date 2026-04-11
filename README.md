@@ -1,6 +1,6 @@
 # Focus Tracker — Chrome Extension
 
-Track and limit time spent on social media. Built with React, TypeScript, and Vite.
+Track and limit time spent on social media. Built with React, TypeScript and Vite.
 
 ---
 
@@ -27,7 +27,7 @@ Then reload the extension in `chrome://extensions` after each rebuild.
 
 ## Architecture
 
-The extension has **three isolated execution environments** that communicate via message passing:
+The extension has **three isolated environments** that communicate via message passing:
 
 ```
 ┌─────────────────────────────┐
@@ -82,15 +82,15 @@ src/
 
 ---
 
-## Interview talking points
+## Talking points
 
 - **Three execution environments** with message passing to keep state consistent
 - **Custom `useStorage` hook** abstracting Chrome Storage API for clean React components
-- **Raw SVG bar chart** — no Chart.js, full control over animation
+- **Raw SVG bar chart**: no Chart.js, full control over animation
 - **`chrome.idle` API** to pause timer accurately when user walks away
 - **`declarativeNetRequest`** for network-level blocking (not JS injection)
 - **Chrome Storage Sync** so settings persist across devices
-- Set up from scratch with Vite, no boilerplate — configured multiple entry points, manifest handling
+- Set up from scratch with Vite, no boilerplate: configured multiple entry points, manifest handling
 
 ---
 
